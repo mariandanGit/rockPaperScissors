@@ -1,13 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik);
 
+@font-face {
+    font-family: MorganChalk;
+    src: url(ChangeTomorrowToday-a5no.ttf);
+}
+
 html{
-    
-    font-family: Rubik;
+    font-family: MorganChalk;
+    font-size: 20px;
 }
 body{
-
     margin:0;
-    background-color: teal;
+    background-color: rgb(29, 28, 28);
 }
 h1{
     color:white;
@@ -37,14 +41,17 @@ h1{
     border-left: 6px tomato;
 }
 #playerRockHand{
-    height: 144px;
-    width: 187px;
+    height: 164px;
+    width: 207px;
 }
 #computerRockHand{
-    height: 144px;
-    width: 187px;
+    height: 120px;
+    width: 172px;
 }
-.playerHands{
+#computerPaperHand{
+    height: 144px;
+}
+.handsDiv img{
     filter: brightness(70%);
     transition: 200ms;
 }
@@ -55,4 +62,13 @@ h1{
 .computerHands:hover{
     cursor:not-allowed;
 }
-
+#computerRockHandDiv{
+    display: flex;
+    justify-content: flex-end;
+}
+#blackBoardDiv{
+    width: 600px;
+    border: 10px solid rgb(175, 137, 87);
+    border-radius: 10px;
+    background-color: rgb(29, 28, 28);
+}
