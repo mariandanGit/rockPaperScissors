@@ -1,44 +1,43 @@
-@import url(https://fonts.googleapis.com/css?family=Rubik);
-
-@font-face {
-    font-family: MorganChalk;
-    src: url(ChangeTomorrowToday-a5no.ttf);
-}
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue);
 
 html{
-    font-family: MorganChalk;
-    font-size: 20px;
+    font-family: Bebas Neue;
+    font-size: 25px;
 }
 body{
     margin:0;
-    background-color: rgb(29, 28, 28);
+    background:linear-gradient(135deg, rgb(0, 0, 0) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, rgb(0, 0, 0) 25%, transparent 25%),
+    linear-gradient(45deg, black 25%, transparent 25%);	
+    background-size: 2em 2em;
+    background-color: #232323;
 }
 h1{
-    color:white;
+    color:rgba(255, 255, 255, 0.87);
     text-align: center;
 }
+h2{
+    font-size:300px;
+    color: rgb(92, 65, 143);
+}
 #mainDiv{
-    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+#mainDiv, #gameDiv{
+    height: 80vh;
 }
 #gameDiv{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 500px;
 }
 .handsDiv{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-#lineDiv{
-    position: absolute;
-    left: 50%;
-    height: 500px;
-    border-left: 6px tomato;
 }
 #playerRockHand{
     height: 164px;
@@ -66,9 +65,46 @@ h1{
     display: flex;
     justify-content: flex-end;
 }
-#blackBoardDiv{
-    width: 600px;
-    border: 10px solid rgb(175, 137, 87);
-    border-radius: 10px;
-    background-color: rgb(29, 28, 28);
+#score{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+}
+#scoreDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 200px;
+}
+@media screen and (max-width: 800px){
+
+    h1{
+        font-size:30px
+    }
+
+    #playerRockHand{
+        height: 130px;
+        width: 160px;
+    }
+    #playerPaperHand{
+        height: 160px;
+        width: 162px;
+    }
+    #playerScissorsHand{
+        height: 72px;
+        width: 170px;
+    }
+
+    #computerRockHand{
+        height: 110px;
+        width: 150px;
+    }
+    #computerPaperHand{
+        height: 130px;
+        width: 190px;
+    }
+    #computerScissorsHand{
+        height: 90px;
+        width: 190px;
+    }
 }
