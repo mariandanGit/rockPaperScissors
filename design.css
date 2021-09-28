@@ -21,6 +21,10 @@ h2{
     font-size:300px;
     color: rgb(92, 65, 143);
 }
+p{
+    color:rgba(255, 255, 255, 0.87);
+    text-align: center;
+}
 #mainDiv{
     display: flex;
     flex-direction: column;
@@ -76,10 +80,37 @@ h2{
     justify-content: space-around;
     width: 200px;
 }
+
+.endModel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    top:0px;
+    transform: scale(0);
+}
+.endModel.active{
+    transform: scale(1);
+}
+
+#restartButton:hover{
+    
+    color:blueviolet;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 800px){
 
     h1{
         font-size:30px
+    }
+
+    p{
+        font-size: 15px;
     }
 
     #playerRockHand{
